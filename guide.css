@@ -1,0 +1,179 @@
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Header */
+.nav-header {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.back-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+/* Header Section */
+.header {
+    position: relative;
+    height: 300px;
+}
+
+.header-content {
+    position: relative;
+    height: 100%;
+}
+
+.header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Content Section */
+.content {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Table Styling */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border: 3px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Footer Styling */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 23px; /* Default font size for larger screens */
+    padding: 13px;
+    height: 40px; /* Adjust height as needed */
+    text-align: center;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        height: 200px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .footer {
+        font-size: 20px;
+    }
+}

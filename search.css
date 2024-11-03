@@ -1,0 +1,142 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background color for the body */
+}
+
+/* Introductory/Container section styles */
+.intro {
+    width: 75%;
+    margin: 20px auto;
+    background-color: #fff; /* White background for the content area */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Heading styles within the intro section */
+.intro h1 {
+    font-family: 'Georgia', serif; /* Use Georgia font for the heading */
+    font-size: 36px; 
+    font-weight: 300; 
+    color: #333; /* Dark color for the heading */
+    text-align: center; /* Center the heading text */
+}
+
+/* Search container styles */
+.search-container {
+    margin: 20px 0; /* Margin for the search container */
+    text-align: center; /* Center the search form */
+}
+
+.search-box {
+    font-size: 16px; /* Font size for input box */
+    padding: 10px; /* Padding inside the input box */
+    width: calc(100% - 120px); /* Full width minus button width */
+    border: 2px solid #ddd; /* Light gray border for input */
+    border-radius: 5px; /* Rounded corners for input */
+}
+
+/* Button styles for submission */
+.submit-btn {
+    font-size: 16px; 
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 5px; 
+    border: none; 
+    cursor: pointer; 
+    background-color: #3fa34d; /* Blue background for button */
+    color: white; /* White text color */
+    transition: opacity 0.3s; /* Smooth transition for hover */
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+    opacity: 0.9; /* Slightly transparent on hover */
+}
+
+/* Results section styles */
+.results {
+    margin-top: 20px; /* Margin above results section */
+}
+
+/* Table styles */
+.table {
+    margin: 20px auto; /* Center the table */
+    width: 90%; 
+    border-collapse: collapse; /* Collapse borders for the table */
+}
+
+th, td {
+    font-size: 12px; /* Font size for table cells */
+    text-align: left; /* Left align text in table cells */
+    padding: 8px; /* Padding for table cells */
+    border: 2px solid #ddd; /* Light gray border for table cells */
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for table headers */
+    font-weight: bold; /* Bold font for table headers */
+}
+
+/* Row hover effect */
+tr:hover {
+    background-color: #f1f1f1; /* Light gray background on row hover */
+}
+
+/* Search result message styles */
+p {
+    text-align: center; /* Center align messages */
+    font-size: 14px; 
+    color: #666; /* Subtle color for messages */
+}
+
+/* Button back styles */
+.btn-back {
+    text-decoration: none; /* Remove underline from link */
+    background-color: #343a40; /* Red background for back button */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Make it behave like a button */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+    text-align: center; /* Center align text in button */
+}
+
+/* Back button hover effect */
+.btn-back:hover {
+    background-color: #212529; /* Darker red on hover */
+}
+
+/* Button container styles */
+.btn-container {
+    text-align: center; /* Center the button within its container */
+    margin: 20px 0; /* Margin above and below the button */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .table {
+        width: 100%; /* Full width for smaller screens */
+        display: block; /* Enable block display */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+        margin: 0; /* Remove margin for full width */
+    }
+
+    th, td {
+        font-size: 10px; /* Decrease font size for table cells */
+        padding: 6px; /* Adjust padding for smaller screens */
+    }
+
+    .intro {
+        width: 95%; /* Increase width for smaller screens */
+    }
+
+    .search-box {
+        width: calc(100% - 90px); /* Adjust search box width */
+    }
+
+    .btn-container {
+        margin: 10px auto; /* Center the button on smaller screens */
+    }
+}

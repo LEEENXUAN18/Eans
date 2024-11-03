@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <img src="image/logo.jpg" alt="Logo" class="logo">
+        <h2>Excellence Award Nomination System (EANS)</h2>
+        <h3>Sign Up</h3>
+        
+        <form action="signup.php" method="post" enctype="multipart/form-data">
+            <label for="text">Username:</label>
+            <input type="text" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+            
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" name="cpassword" required>
+            
+            <label for="image">Profile Image:</label>
+            <input type="file" name="image" accept="image/jpg, image/jpeg, image/png">
+            
+            <button type="submit">Register</button>
+        </form>
+        <!-- Added this container to ensure it's displayed properly -->
+        <div class="link-container">
+            <a href="login.html">Already have an account? Log in here</a>
+        </div>
+    </div>
+	
+	<footer class="footer">
+    <p>Copyright © PSP EANS, AIEWANILEE. All Right Reserved.</p>
+</footer>
+
+</body>
+</html>

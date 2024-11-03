@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider with Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrolling of the whole page */
+        }
+
+        .container {
+            text-align: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px; /* Added padding for better spacing */
+            box-sizing: border-box; /* Ensure padding is included in width */
+        }
+
+        .display-image {
+            max-width: 100%; /* Full width for responsiveness */
+            max-height: 70vh; /* Control height for better display */
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            object-fit: contain; /* Ensure the image scales correctly */
+        }
+
+        .navigation {
+            margin-top: 20px;
+        }
+
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 0 10px; /* Spacing between buttons */
+        }
+
+        .prev-button {
+            background-color: chocolate; /* Color for Previous button */
+        }
+
+        .prev-button:hover {
+            background-color: darkorange; /* Darker shade on hover */
+        }
+
+        .next-button {
+            background-color: #28a745; /* Different color for Next Page button */
+        }
+
+        .next-button:hover {
+            background-color: #218838; /* Darker shade on hover */
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #343a40; /* Different color for distinction */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px; /* Space between the button and image */
+        }
+
+        .back-button:hover {
+            background-color: #212529;
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 600px) {
+            .nav-button, .back-button {
+                width: 100%; /* Full-width buttons on mobile */
+                font-size: 14px; /* Smaller font size for mobile */
+            }
+            .nav-button {
+                margin-bottom: 10px; /* Space between buttons on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="back-button" onclick="goBack()">Home Page</button>
+        <img id="displayImage" src="image/1.jpg" alt="Display Image" class="display-image">
+        <div class="navigation">
+            <button class="nav-button prev-button" onclick="prevImage()">Previous</button>
+            <button class="nav-button next-button" onclick="nextImage()">Next Page</button>
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            "image/1.jpg",
+            "image/2.jpg",
+            "image/3.jpg",
+            "image/4.jpg",
+            "image/5.jpg",
+            "image/6.jpg",
+            "image/7.jpg",
+            "image/8.jpg",
+            "image/9.jpg",
+            "image/10.jpg",
+            "image/11.jpg"
+        ];
+        let currentIndex = 0;
+
+        // Function to display the current image
+        function displayImage() {
+            const imgElement = document.getElementById("displayImage");
+            imgElement.src = images[currentIndex];
+        }
+
+        // Function to go to the next image
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Loop back to start
+            displayImage();
+        }
+
+        // Function to go to the previous image
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to end
+            displayImage();
+        }
+
+        // Function to go back in history
+        function goBack() {
+            window.history.back();
+        }
+
+        // Display the first image on load
+        displayImage();
+    </script>
+</body>
+</html>

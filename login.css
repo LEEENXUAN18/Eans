@@ -1,0 +1,132 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4; /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    background-color: #ffffff; /* White background for form */
+    padding: 20px; /* Space inside the container */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Full width on mobile */
+    max-width: 400px; /* Max width on larger screens */
+    text-align: center; /* Centered text */
+}
+
+.logo {
+    display: block;            /* Makes the logo a block element */
+    margin: 0 auto 20px;     /* Centers the logo and adds margin below */
+    width: 80%;               /* Adjust the width as needed */
+    max-width: 90px;          /* Max width for larger screens */
+    height: auto;             /* Maintains aspect ratio */
+}
+
+h2 {
+    color: #333; /* Header color */
+    margin-bottom: 10px;
+	font-size: 1.0em; /* Smaller heading on very small screens */
+
+}
+
+h3 {
+    color: #555; /* Subtitle color */
+    margin-bottom: 20px;
+	font-size: 0.8em; /* Smaller heading on very small screens */
+
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 0.8em; /* Adjust label size */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 15px; /* Space between inputs */
+}
+
+button {
+    background-color: #fcd32a; /* Button color */
+    color: #333; /* Button text color */
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer; /* Pointer on hover */
+    width: 100%; /* Full width */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background: rgba(37, 95, 156, 0.937); /* Change color on hover */
+    color: #fff;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff; /* Link color */
+    font-size: 0.8em; /* Smaller heading on very small screens */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+/* Styles for the footer */
+.footer {
+    background-color: black;
+    color: white; 
+    text-align: center; 
+    padding: 10px 0; 
+    position: fixed; 
+    width: 100%;
+    bottom: 0; 
+    left: 0;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.0em; /* Larger heading on mobile */
+    }
+
+    h3 {
+        font-size: 0.8em; /* Adjusted subtitle size */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Slightly wider for very small screens */
+    }
+
+    h2 {
+        font-size: 1.0em; /* Smaller heading on very small screens */
+    }
+
+    h3 {
+        font-size: 0.8em; /* Smaller subtitle size */
+    }
+}

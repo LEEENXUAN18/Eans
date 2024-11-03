@@ -1,0 +1,164 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* font to all elements */
+* {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* background & padding for the main container */
+.wrapper{
+    background: #ececec;
+    padding: 0 20px 0 20px;
+}
+
+/* Centers the content both horizontally and vertically */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Styles for the left side image container */
+.side-image {
+    background-image: url("image/konvo.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+
+/* Defines the size and appearance of the form container */
+.row {
+    width: 900px;
+    height: 550px;
+    border-radius: 10px;
+    background: #fff;
+    padding: 0;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Centers the text within the side image container */
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Text Paragraph - Styles for the paragraph inside the text container */
+.text p {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Styles for the right side of the form container */
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+/* Styles for the form header */
+.input-box header {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Styles for the logo above the header */
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100px; 
+    height: auto; 
+}
+
+/* Styles for the submit links */
+.submit {
+    display: block;
+    text-align: center;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: gold;
+    border-radius: 5px;
+    transition: .4s;
+    width: 100%;
+    margin-bottom: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    text-decoration: none; 
+    line-height: 33px; 
+}
+
+
+/* Changes button style on hover */
+.submit:hover {
+    background: rgba(37, 95, 156, 0.937);
+    color: #fff;
+}
+
+
+/* Styles for the footer */
+.footer {
+    background-color: black;
+    color: white; 
+    text-align: center; 
+    padding: 10px 0; 
+    position: fixed; 
+    width: 100%;
+    bottom: 0; 
+    left: 0;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media only screen and (max-width: 768px) {
+    .row {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    .side-image {
+        height: 180px;
+        border-radius: 10px 10px 0 0;
+    }
+    .text {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media only screen and (max-width: 480px) {
+    .row {
+        max-width: 420px;
+        padding: 10px;
+    }
+    .side-image {
+        height: 150px;
+        border-radius: 10px 10px 0 0;
+    }
+    .text p {
+        font-size: 16px;
+    }
+    .input-box {
+        padding: 10px;
+    }
+    .submit {
+        font-size: 13px;
+        padding: 4px;
+    }
+}

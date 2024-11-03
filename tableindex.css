@@ -1,0 +1,244 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Introductory/Container section styles */
+.intro {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles within the intro section */
+.intro h1 {
+    font-family: 'Georgia', serif; 
+    font-size: 36px; 
+    font-weight: 300; 
+    color: #333;
+    text-align: center;
+}
+
+.table {
+    margin: 10px auto;
+    width: 90%; 
+    border-collapse: collapse;
+    overflow-x: auto; /* Enables horizontal scrolling on smaller screens */
+}
+
+th, td {
+    font-size: 9px; /* Smaller font size for table data */
+    text-align: left;
+    padding: 4px; /* Reduced padding for a more compact look */
+    border: 1px solid #ddd; /* Changed border to 1px for compactness */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Adjust the header cells to be smaller */
+.table thead th {
+    padding: 6px; /* Reduced padding for smaller headers */
+    font-size: 10px; /* Decrease font size */
+    text-align: center; /* Center-align the text */
+    vertical-align: middle;
+}
+
+/* Row hover effect */
+tr:hover {
+    background-color: #f1f1f1; 
+}
+
+.btn-group {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px 0; /* Add some margin above and below the group */
+    gap: 10px; /* Space between buttons */
+}
+
+.btn-add, .btn-search {
+    font-size: 16px; 
+    text-decoration: none; 
+    padding: 8px; /* Slightly smaller padding */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn-add {
+    background-color: #90e0ef; 
+    color: black; 
+}
+
+.btn-search {
+    background-color: #ffd000; 
+    color: black;
+}
+
+.btn-add:hover, .btn-search:hover {
+    opacity: 0.9; 
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; /* Center align icons */
+    margin-top: 5px; /* Optional: Add space between Confirm and Edit/Delete */
+}
+
+.icon-container a {
+    margin-top: 5px; /* Adds spacing between Edit and Delete icons */
+    font-size: 15px; /* Set to 12px for a smaller icon */
+    color: black; /* Ensure the icon color is set correctly */
+    display: inline-flex; /* Ensures the icon aligns nicely with the button */
+    align-items: center; /* Center aligns the icon within the button */
+}
+
+.btn-confirm {
+    font-size: 8px;
+}
+
+/* Center the button container */
+.btn-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+.home-button {
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 20px; /* Add space below the button */
+}
+
+.btn-home {
+    background-color: #495057; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Padding around the text */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.btn-home:hover {
+    background-color: #161a1d; /* Darker blue on hover */
+}
+
+.skills-section {
+    display: flex;
+    justify-content: center; /* Center the flex items */
+    margin-top: 20px; /* Margin above the section */
+}
+
+.main-skills {
+    display: flex;
+    gap: 20px; /* Space between cards */
+}
+
+.card {
+    background-color: #fff; /* Card background color */
+    border: 1px solid #ddd; /* Card border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Transition for hover effect */
+    width: 200px; /* Set a fixed width for all cards */
+    height: 100px; /* Set a fixed height for all cards */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+.card h3 {
+    margin: 10px 0; /* Margin above and below heading */
+}
+
+.card button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.card button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+.status-button {
+    border: none;
+    padding: 6px 10px; /* Increased padding for better spacing */
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 8px; /* Adjusted font size */
+    margin-right: 5px; /* Added margin for spacing between buttons */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    width: 80px; /* Set a fixed width for all buttons to ensure uniformity */
+}
+
+.btn-approve {
+    background-color: green; /* Approve button color */
+}
+
+.btn-pending {
+    background-color: yellow; /* Pending button color */
+    color: black; /* Text color for pending */
+}
+
+.btn-reject {
+    background-color: red; /* Reject button color */
+}
+
+/* Footer Styling */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    font-size: 15px; /* Default font size for larger screens */
+    padding: 13px;
+    height: 10px; /* Adjust height as needed */
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .table {
+        width: 100%; /* Full width for smaller screens */
+        display: block; /* Enable block display */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    }
+
+    th, td {
+        font-size: 8px; /* Further adjust font size for smaller screens */
+        padding: 4px; /* Maintain reduced padding for consistency */
+    }
+
+.btn-group {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px 0; /* Add some margin above and below the group */
+    gap: 10px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+    .card {
+        width: 100%; /* Full width for cards on smaller screens */
+        height: auto; /* Auto height for flexibility */
+    }
+}

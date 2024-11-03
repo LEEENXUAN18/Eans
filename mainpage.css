@@ -1,0 +1,686 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%; /* Make the logo responsive */
+    max-width: 100px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+
+...........................................................
+
+
+
+
+
+.dropdown-header {
+    font-size: 16px; /* Font size for the dropdown header */
+    font-weight: bold; /* Bold font for the header */
+    color: #22333b; /* Header color */
+    padding: 10px; /* Add some padding */
+    background-color: #22333b; /* Optional: background color for the header */
+    border-bottom: 1px solid #ccc; /* Optional: border below the header */
+}
+
+.dropdown-content ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.dropdown-content li a {
+    display: block; /* Make the entire link clickable */
+    padding: 10px; /* Padding for each item */
+    text-decoration: none; /* No underline for links */
+    color: #333; /* Link color */
+}
+
+.dropdown-content li a:hover {
+    background-color: #22333b; /* Background on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Menu Icon */
+.menu-icon {
+    display: none; /* Hidden on larger screens */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('path-to-background-image.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+/* Content Tabs */
+.content-tabs {
+    padding: 20px;
+    text-align: center;
+}
+
+.content-tabs h2 {
+    margin-top: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tabs button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.tab-content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+/* Ensure dropdown is hidden initially */
+nav .dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute; /* Absolutely positioned */
+    background-color: white; /* Background color */
+    border: 1px solid #ccc; /* Optional border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    padding: 10px; /* Padding for dropdown items */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Show dropdown when hovered */
+nav .dropdown:hover .dropdown-content,
+nav .dropdown-content.show {
+    display: block; /* Show dropdown */
+}
+
+/* Dropdown items */
+nav .dropdown-content li {
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Adjust the styling of links */
+nav .dropdown-content li a {
+    display: block; /* Block display for easier clicking */
+    padding: 5px 10px; /* Padding for dropdown items */
+    color: black; /* Text color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect */
+nav .dropdown-content li a:hover {
+    background-color: #f5f5f5; /* Background on hover */
+}
+
+.profile-btn,
+.logout-btn {
+    background-color: transparent; /* No background color */
+    color: black; /* Icon color */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 20px; /* Increase icon size */
+    margin-left: 10px; /* Space between buttons */
+    display: flex; /* Use flex to center the icon */
+    align-items: center; /* Center icon vertically */
+    padding: 0; /* No padding */
+}
+
+.profile-btn:hover,
+.logout-btn:hover {
+    color: #ff6600; /* Change color on hover */
+}
+
+/* Banner Section Styles */
+.banner {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 400px; /* Adjust height as needed */
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+	overflow: hidden; 
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+	align-items: center;
+    width: 100%;
+    text-align: center; /* Center text */
+    background-size: cover; /* Cover background */
+    background-position: center; /* Center background */
+	
+    height: 100%;
+	color: white; /* Text color */
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+
+.slide.active {
+    display: block; /* Show active slide */
+}
+
+h1 {
+    font-size: 48px; /* Adjust as needed */
+    margin-top: 20%; /* Space from top */
+}
+
+p {
+    font-size: 24px; /* Adjust as needed */
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background on hover */
+}
+
+    h2.psp {
+    font-size: 3em; /* Smaller font size on smaller screens */
+    font-weight: bold; /* Bold text */
+    margin: 0; /* Remove default margin */
+    margin-bottom: 10px; /* Add margin below h2 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow effect */
+    color: #FFD700; /* Gold color for the heading */		
+    }
+    
+    p.psp {
+		text-align: center; /* Align items to the left */
+    font-size: 2em; /* Adjust font size for paragraph */
+	font-weight: bold; /* Bold text */
+    margin: 0; /* Remove default margin */
+    padding-top: 10px; /* Add padding above the paragraph */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    color: #FFFFFF; /* White color for the paragraph */
+    }
+
+
+.awards-section {
+    background-color: #fffae5; /* Light background color */
+    padding: 40px 20px; /* Padding for spacing */
+    text-align: center; /* Center align text */
+}
+
+.awards-container {
+    display: flex; /* Flexbox for alignment */
+    flex-direction: row; /* Horizontal layout */
+    align-items: center; /* Center vertically */
+    justify-content: space-around; /* Space out the items */
+}
+
+.award-image img {
+    max-width: 600px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.awards-list {
+    max-width: 600px; /* Limit width of text area */
+}
+
+.award-item {
+    background-color: #fff; /* White background for the item */
+    border: 2px solid #ccc; /* Border for the item */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.award-item.blue {
+    border-left: 4px solid #000000; /* Left border for emphasis */
+}
+
+.award-item h3 {
+    color: #b8860b; /* Darker gold color */
+    margin-bottom: 15px; /* Spacing below heading */
+	    font-size: 20px;
+
+}
+
+.award-item p {
+    color: #555; /* Darker gray for text */
+    line-height: 1.6; /* Improve readability */
+    text-align: justify; /* Justify the text */
+	font-size: 16px;
+}
+
+
+.latest-news {
+    padding: 20px; /* Add padding around the section */
+    background-color: #f9dc5c; /* Light background color */
+}
+
+.latest-news h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Heading color */
+}
+
+.latest-news .news-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.news-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Space between cards */
+}
+
+.news-card {
+    background-color: white; /* White background for the card */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    width: 250px; /* Fixed width */
+    transition: transform 0.3s; /* Smooth scaling */
+}
+
+.news-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.news-card img {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.news-info {
+    padding: 15px; /* Add padding inside the card */
+}
+
+.news-info span {
+    display: block; /* Block display for the date */
+    font-size: 0.9em; /* Smaller font size for date */
+    color: #666; /* Grey color for date */
+}
+
+.news-info h3 {
+    margin: 10px 0; /* Space around the heading */
+    font-size: 1.1em; /* Heading font size */
+}
+
+.news-info a {
+    text-decoration: none; /* No underline */
+    color: #007BFF; /* Link color */
+    font-weight: bold; /* Bold link */
+}
+
+.news-info a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer {
+    text-align: center;
+    background-color: #000; /* Black background */
+    color: white;
+    font-size: 6px; /* Smaller font size */
+    padding: 2px; /* Smaller padding */
+    margin: 0; /* Remove margin for a tighter fit */
+}
+
+/* Contact Us Section Styling */
+.contact-us {
+    padding: 20px;
+    background-color: #fffceb; /* Light background for better visibility */
+    text-align: center; /* Center align text */
+    background-image: url('path-to-image.jpg'); /* Light background image for depth */
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Text color for readability */
+}
+
+.contact-quote {
+    font-size: 20px;
+    font-style: italic;
+    color: #555; /* Soft color for quote */
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;              /* Use flexbox for layout */
+    justify-content: center;    /* Center items horizontally */
+    align-items: stretch;       /* Stretch items to have the same height */
+    gap: 20px;                  /* Space between items */
+    flex-wrap: wrap;            /* Allow items to wrap on smaller screens */
+}
+
+.contact-item {
+    border: 2px solid #ccc;     /* Set consistent border width */
+    padding: 15px;              /* Padding inside the border */
+    border-radius: 5px;         /* Slightly rounded corners */
+    background-color: #ffffff;  /* White background for items */
+    width: 200px;               /* Fixed width for each item */
+    height: 120px;              /* Fixed height for each item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.1s, border-color 0.1s, box-shadow 0.1s; /* Smooth transition */
+}
+
+/* Interactive Styling on Hover */
+.contact-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    border-color: #a47e1b; /* Highlight border on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.contact-item h3 {
+    font-size: 18px; /* Heading size for larger text */
+    margin: 0; /* Remove default margin */
+    color: #a47e1b; /* Motivational color */
+}
+
+.contact-item p {
+    font-size: 16px; /* Text size for contact information */
+}
+
+/* Hover Effects for Text */
+.contact-item:hover h3, .contact-item:hover p {
+    color: #333; /* Darker text color on hover */
+}
+
+/* Optional Glow Effect on Hover */
+.contact-item:hover {
+    box-shadow: 0 0 10px #a47e1b; /* Soft gold glow */
+}
+
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Add spacing above and below */
+}
+
+.social-icon {
+    margin: 0 10px; /* Space between icons */
+    object-fit: contain; /* Ensure the image fits within the specified dimensions */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.instagram-icon {
+    width: 50px; /* Set Instagram icon size */
+    height: 50px; /* Set Instagram icon size */
+}
+
+.facebook-icon {
+    width: 30px; /* Set Facebook icon size */
+    height: 50px; /* Set Facebook icon size */
+}
+
+.psp-icon {
+    width: 200px;  /* Adjust the width to your preference */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+
+.social-icon:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Space between logo and nav */
+    }
+
+    .main-nav ul {
+        display: none; /* Hide the menu by default on mobile */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
+        padding: 10px 0; /* Add padding */
+    }
+
+    .menu-icon {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    .main-nav ul.show {
+        display: flex; /* Show the menu when it has the 'show' class */
+    }
+
+    .main-nav ul li {
+        text-align: left; /* Align items to the left */
+        margin-bottom: 10px; /* Space between list items */
+    }
+
+    .hero-section h1 {
+        font-size: 32px; /* Smaller font on mobile */
+    }
+
+    .logo img {
+        max-width: 60px; /* Smaller logo on mobile */
+    }
+
+    .logo-text {
+        font-size: 16px; /* Smaller text on mobile */
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column; /* Stack tabs vertically on mobile */
+    }
+	
+	
+    h2.psp {
+    font-size: 1.5em; /* Smaller font size on smaller screens */
+    font-weight: bold; /* Bold text */
+    margin: 0; /* Remove default margin */
+    margin-bottom: 10px; /* Add margin below h2 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow effect */
+    color: #FFD700; /* Gold color for the heading */		
+    }
+    
+    p.psp {
+		text-align: center; /* Align items to the left */
+    font-size: 1.5em; /* Adjust font size for paragraph */
+	font-weight: bold; /* Bold text */
+    margin: 0; /* Remove default margin */
+    padding-top: 10px; /* Add padding above the paragraph */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    color: #FFFFFF; /* White color for the paragraph */
+    }
+	
+	
+    .awards-container {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center align items */
+    }
+
+    .award-image img {
+        max-width: 150px; /* Smaller image size for mobile */
+    }
+
+    .awards-list {
+        max-width: 100%; /* Allow full width for mobile */
+        padding: 5px; /* Adjust padding */
+		
+    }
+
+.award-item {
+    background-color: #fff; /* White background for the item */
+    border: 1px solid #ccc; /* Border for the item */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.award-item h3 {
+    color: #b8860b; /* Darker gold color */
+    margin-bottom: 15px; /* Spacing below heading */
+	    font-size: 20px;
+
+}
+
+.award-item p {
+    color: #555; /* Darker gray for text */
+    line-height: 1.5; /* Improve readability */
+    text-align: justify; /* Justify the text */
+	font-size: 15px;
+}
+
+    .news-container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center align */
+    }
+
+    .news-card {
+        width: 90%; /* Full width for small screens */
+    }	
+	
+	
+
+	
+    .footer p {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+	
+    .contact-item {
+        font-size: 14px; /* Adjust font size for mobile */
+        width: 80%;      /* Use a percentage width for mobile */
+        height: auto;    /* Auto height to accommodate text */
+    }
+
+    .contact-item h3 {
+        font-size: 16px; /* Smaller heading size on mobile */
+    }
+
+    .contact-info {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center;     /* Center items vertically */
+    }
+	
+
+}
+
+
+
+
+/* For Mobile View: Show Navigation on Menu Icon Click */
+@media (max-width: 768px) {
+    .main-nav ul.show {
+        display: flex; /* Show the menu when it has the 'show' class */
+    }
+}
+
+
+@media (min-width: 769px) {
+    .contact-item {
+        font-size: 16px; /* Adjust font size for larger screens */
+    }
+
+    .contact-item h3 {
+        font-size: 20px; /* Larger heading size on larger screens */
+    }
+}
+
+
+
+
+
+/* Additional styles for very small screens */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 24px; /* Even smaller font for very small devices */
+    }
+
+    .tabs button {
+        padding: 8px 16px; /* Smaller button on mobile */
+        font-size: 14px; /* Smaller font for buttons */
+    }
+	
+
+}

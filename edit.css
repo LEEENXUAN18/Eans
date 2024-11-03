@@ -1,0 +1,12 @@
+.form-row-center {
+    display: flex;
+    justify-content: center; /* Center-aligns the buttons */
+    gap: 10px; /* Adds space between the buttons */
+    margin-top: 20px; /* Adds some space above the buttons */
+}
+
+.form-row-center button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
